@@ -1,0 +1,5 @@
+let a=2 and b=10 and c=5 in
+let des = (b*b) - (4 *a*c) in 
+if des<0 then "aucune racine"
+else if des>0 then "deux racines"
+else "une seule racine"  

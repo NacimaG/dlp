@@ -1,0 +1,10 @@
+prefix=/users/Etu3/3704383/Workspace/Ilp/Java/src/com/paracamplus/ilp2/ilp2tme3/C/gc-7.2/libatomic_ops-install
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: The atomic_ops project
+Description: Atomic memory update operations portable implementation
+Version: 7.2
+Libs: -L${libdir} -latomic_ops
+Cflags: -I${includedir}

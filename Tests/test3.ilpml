@@ -1,0 +1,5 @@
+z=2
+function f(z) : g(z) + 2
+function g(x) x * z
+
+f(3)
