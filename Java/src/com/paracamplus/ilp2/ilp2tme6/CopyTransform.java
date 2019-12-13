@@ -5,6 +5,11 @@ import com.paracamplus.ilp1.interfaces.IASTalternative;
 import com.paracamplus.ilp1.interfaces.IASTbinaryOperation;
 import com.paracamplus.ilp1.interfaces.IASTblock;
 import com.paracamplus.ilp1.interfaces.IASTblock.IASTbinding;
+import com.paracamplus.ilp1.interpreter.EmptyLexicalEnvironment;
+import com.paracamplus.ilp1.interpreter.Function;
+import com.paracamplus.ilp1.interpreter.interfaces.EvaluationException;
+import com.paracamplus.ilp1.interpreter.interfaces.ILexicalEnvironment;
+import com.paracamplus.ilp1.interpreter.interfaces.Invocable;
 import com.paracamplus.ilp1.interfaces.IASTboolean;
 import com.paracamplus.ilp1.interfaces.IASTexpression;
 import com.paracamplus.ilp1.interfaces.IASTfloat;
@@ -112,6 +117,7 @@ public class CopyTransform<Data> implements IASTvisitor<IASTexpression, Data, Co
 	@Override
 	public IASTexpression visit(IASTassignment iast, Data data) throws CompilationException {
 		IASTvariable variable= iast.getVariable();
+		
 		IASTexpression value= iast.getExpression().accept(this, data);
 		return factory.newAssignment(variable, value);
 	}
@@ -123,16 +129,27 @@ public class CopyTransform<Data> implements IASTvisitor<IASTexpression, Data, Co
 		return factory.newLoop(condition, body);
 	}
 	
+	  public Invocable visit(IASTfunctionDefinition iast, ILexicalEnvironment lexenv) 
+	            throws EvaluationException {
+	        Invocable fun = new Function(iast.getVariables(),
+	                                     iast.getBody(),
+	                                     new EmptyLexicalEnvironment());
+	        
+	        return fun;
+	    }
+	
 	
 	
 	public IASTprogram visit(IASTprogram iast, Data data) throws CompilationException {
 
 		IASTfunctionDefinition[] functions = iast.getFunctionDefinitions();
 		for (int i = 0; i < functions.length; i++) {
-			functions[i].getBody().accept(this, data);
-			functions[i].getFunctionVariable().accept(this, data);
-			//for (int j = 0; i < functions[i].getVariables().length -1 ; j++)
-				//functions[i].getVariables()[j].accept(this, data);
+			IASTexpression body = functions[i].getBody().accept(this, data);
+			if (body instanceof IASTinvocation) {
+				IASTinvocation other = (IASTinvocation) body;
+				other.accept(this, data);
+			}
+			IASTexpression exp = functions[i].getFunctionVariable().accept(this, data);
 		}
 
 		IASTexpression expression = iast.getBody().accept(this, data);

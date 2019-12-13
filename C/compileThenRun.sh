@@ -81,7 +81,7 @@ esac
   then 
       echo "Compilation de la bibliotheque d'execution d'ILP..." >&2
       make clean
-      if make 
+      if make work
       then :
       else
           echo "GC non compilable: option +gc non possible!" >&2

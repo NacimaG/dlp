@@ -10,27 +10,30 @@ ILP_Object print;
 /* Global functions */ 
 
 
+/* Classes */ 
+
+
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp633; 
+  ILP_Object ilptmp2816; 
 { 
-  ILP_Object ilptmp634; 
-ilptmp634 = ILP_TRUE; 
-  if ( ILP_isEquivalentToTrue(ilptmp634 ) ) {
+  ILP_Object ilptmp2817; 
+ilptmp2817 = ILP_TRUE; 
+  if ( ILP_isEquivalentToTrue(ilptmp2817 ) ) {
 { 
-  ILP_Object ilptmp635; 
-ilptmp635 =  ILP_String2ILP("invisible"); 
-ilptmp633 = ILP_print(ilptmp635);
+  ILP_Object ilptmp2818; 
+ilptmp2818 =  ILP_String2ILP("invisible"); 
+ilptmp2816 = ILP_print(ilptmp2818);
 }
 
   } else {
-ilptmp633 = ILP_FALSE; 
+ilptmp2816 = ILP_FALSE; 
 
   }
 }
-ilptmp633 = ILP_Integer2ILP(48); 
-return ilptmp633; 
+ilptmp2816 = ILP_Integer2ILP(48); 
+return ilptmp2816; 
 } 
 
 } 

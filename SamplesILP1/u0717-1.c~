@@ -9,14 +9,17 @@
 /* Global functions */ 
 
 
+/* Classes */ 
+
+
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp420; 
-  ILP_Object ilptmp421; 
-ilptmp420 = ILP_Integer2ILP(717); 
-ilptmp421 = ILP_FALSE; 
-return ILP_Xor(ilptmp420, ilptmp421);
+  ILP_Object ilptmp2603; 
+  ILP_Object ilptmp2604; 
+ilptmp2603 = ILP_Integer2ILP(717); 
+ilptmp2604 = ILP_FALSE; 
+return ILP_Xor(ilptmp2603, ilptmp2604);
 } 
 
 } 

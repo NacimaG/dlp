@@ -9,13 +9,16 @@
 /* Global functions */
 
 
+/* Classes */
+
+
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp385;
-    ilptmp385 = ILP_Integer2ILP (34);
-    return ILP_Opposite (ilptmp385);
+    ILP_Object ilptmp2568;
+    ilptmp2568 = ILP_Integer2ILP (34);
+    return ILP_Opposite (ilptmp2568);
   }
 
 }

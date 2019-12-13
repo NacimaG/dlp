@@ -10,31 +10,34 @@ ILP_Object print;
 /* Global functions */
 
 
+/* Classes */
+
+
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp627;
+    ILP_Object ilptmp2810;
     {
-      ILP_Object ilptmp628;
-      ilptmp628 = ILP_FALSE;
-      if (ILP_isEquivalentToTrue (ilptmp628))
+      ILP_Object ilptmp2811;
+      ilptmp2811 = ILP_FALSE;
+      if (ILP_isEquivalentToTrue (ilptmp2811))
 	{
 	  {
-	    ILP_Object ilptmp629;
-	    ilptmp629 = ILP_String2ILP ("invisible");
-	    ilptmp627 = ILP_print (ilptmp629);
+	    ILP_Object ilptmp2812;
+	    ilptmp2812 = ILP_String2ILP ("invisible");
+	    ilptmp2810 = ILP_print (ilptmp2812);
 	  }
 
 	}
       else
 	{
-	  ilptmp627 = ILP_FALSE;
+	  ilptmp2810 = ILP_FALSE;
 
 	}
     }
-    ilptmp627 = ILP_Integer2ILP (47);
-    return ilptmp627;
+    ilptmp2810 = ILP_Integer2ILP (47);
+    return ilptmp2810;
   }
 
 }

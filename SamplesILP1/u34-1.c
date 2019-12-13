@@ -9,15 +9,18 @@
 /* Global functions */
 
 
+/* Classes */
+
+
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp584;
-    ILP_Object ilptmp585;
-    ilptmp584 = ILP_String2ILP ("debut");
-    ilptmp585 = ILP_String2ILP ("fin");
-    return ILP_Plus (ilptmp584, ilptmp585);
+    ILP_Object ilptmp2767;
+    ILP_Object ilptmp2768;
+    ilptmp2767 = ILP_String2ILP ("debut");
+    ilptmp2768 = ILP_String2ILP ("fin");
+    return ILP_Plus (ilptmp2767, ilptmp2768);
   }
 
 }

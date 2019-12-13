@@ -9,45 +9,48 @@
 /* Global functions */
 
 
+/* Classes */
+
+
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp540;
-    ILP_Object ilptmp541;
-    ilptmp540 = ILP_Integer2ILP (11);
-    ilptmp541 = ILP_Integer2ILP (22);
+    ILP_Object ilptmp2723;
+    ILP_Object ilptmp2724;
+    ilptmp2723 = ILP_Integer2ILP (11);
+    ilptmp2724 = ILP_Integer2ILP (22);
 
     {
-      ILP_Object x1 = ilptmp540;
-      ILP_Object y2 = ilptmp541;
+      ILP_Object x1 = ilptmp2723;
+      ILP_Object y2 = ilptmp2724;
       {
-	ILP_Object ilptmp542;
-	ILP_Object ilptmp543;
+	ILP_Object ilptmp2725;
+	ILP_Object ilptmp2726;
 	{
-	  ILP_Object ilptmp544;
-	  ILP_Object ilptmp545;
-	  ilptmp544 = x1;
-	  ilptmp545 = y2;
-	  ilptmp542 = ILP_Plus (ilptmp544, ilptmp545);
+	  ILP_Object ilptmp2727;
+	  ILP_Object ilptmp2728;
+	  ilptmp2727 = x1;
+	  ilptmp2728 = y2;
+	  ilptmp2725 = ILP_Plus (ilptmp2727, ilptmp2728);
 	}
 	{
-	  ILP_Object ilptmp546;
-	  ILP_Object ilptmp547;
-	  ilptmp546 = x1;
-	  ilptmp547 = y2;
-	  ilptmp543 = ILP_Times (ilptmp546, ilptmp547);
+	  ILP_Object ilptmp2729;
+	  ILP_Object ilptmp2730;
+	  ilptmp2729 = x1;
+	  ilptmp2730 = y2;
+	  ilptmp2726 = ILP_Times (ilptmp2729, ilptmp2730);
 	}
 
 	{
-	  ILP_Object x3 = ilptmp542;
-	  ILP_Object y4 = ilptmp543;
+	  ILP_Object x3 = ilptmp2725;
+	  ILP_Object y4 = ilptmp2726;
 	  {
-	    ILP_Object ilptmp548;
-	    ILP_Object ilptmp549;
-	    ilptmp548 = x3;
-	    ilptmp549 = y4;
-	    return ILP_Times (ilptmp548, ilptmp549);
+	    ILP_Object ilptmp2731;
+	    ILP_Object ilptmp2732;
+	    ilptmp2731 = x3;
+	    ilptmp2732 = y4;
+	    return ILP_Times (ilptmp2731, ilptmp2732);
 	  }
 
 	}

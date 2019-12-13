@@ -9,15 +9,18 @@
 /* Global functions */
 
 
+/* Classes */
+
+
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp446;
-    ILP_Object ilptmp447;
-    ilptmp446 = ILP_Integer2ILP (33);
-    ilptmp447 = ILP_Integer2ILP (5);
-    return ILP_Modulo (ilptmp446, ilptmp447);
+    ILP_Object ilptmp2629;
+    ILP_Object ilptmp2630;
+    ilptmp2629 = ILP_Integer2ILP (33);
+    ilptmp2630 = ILP_Integer2ILP (5);
+    return ILP_Modulo (ilptmp2629, ilptmp2630);
   }
 
 }

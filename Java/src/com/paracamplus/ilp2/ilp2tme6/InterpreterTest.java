@@ -26,10 +26,11 @@ public class InterpreterTest extends com.paracamplus.ilp2.interpreter.test.Inter
 		super(file);
 		// TODO Auto-generated constructor stub
 	}
+	//"SamplesILP2", "SamplesILP1",
 	
-    protected static String[] samplesDirName = { "SamplesILP2", "SamplesILP1", "SamplesTME6" };
-    protected static String pattern = "*.*";
-  
+    protected static String[] samplesDirName = {  "SamplesTME6" };
+    protected static String pattern = "test5.*";
+    
        
    
     

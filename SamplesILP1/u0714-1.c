@@ -9,15 +9,18 @@
 /* Global functions */
 
 
+/* Classes */
+
+
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp408;
-    ILP_Object ilptmp409;
-    ilptmp408 = ILP_String2ILP ("");
-    ilptmp409 = ILP_TRUE;
-    return ILP_Xor (ilptmp408, ilptmp409);
+    ILP_Object ilptmp2591;
+    ILP_Object ilptmp2592;
+    ilptmp2591 = ILP_String2ILP ("");
+    ilptmp2592 = ILP_TRUE;
+    return ILP_Xor (ilptmp2591, ilptmp2592);
   }
 
 }

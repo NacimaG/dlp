@@ -1,0 +1,8 @@
+class Point
+{
+}
+
+p = new Point();
+
+p["toto"]= 12
+p["toto"]

@@ -9,15 +9,18 @@
 /* Global functions */
 
 
+/* Classes */
+
+
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp470;
-    ILP_Object ilptmp471;
-    ilptmp470 = ILP_Integer2ILP (45);
-    ilptmp471 = ILP_Integer2ILP (44);
-    return ILP_LessThanOrEqual (ilptmp470, ilptmp471);
+    ILP_Object ilptmp2653;
+    ILP_Object ilptmp2654;
+    ilptmp2653 = ILP_Integer2ILP (45);
+    ilptmp2654 = ILP_Integer2ILP (44);
+    return ILP_LessThanOrEqual (ilptmp2653, ilptmp2654);
   }
 
 }

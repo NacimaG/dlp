@@ -9,22 +9,25 @@
 /* Global functions */
 
 
+/* Classes */
+
+
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp295;
+    ILP_Object ilptmp2478;
     {
-      ILP_Object ilptmp296;
-      ilptmp296 = ILP_TRUE;
+      ILP_Object ilptmp2479;
+      ilptmp2479 = ILP_TRUE;
 
       {
-	ILP_Object x1 = ilptmp296;
-	ilptmp295 = x1;
+	ILP_Object x1 = ilptmp2479;
+	ilptmp2478 = x1;
 
       }
     }
-    if (ILP_isEquivalentToTrue (ilptmp295))
+    if (ILP_isEquivalentToTrue (ilptmp2478))
       {
 	return ILP_Integer2ILP (1);
 

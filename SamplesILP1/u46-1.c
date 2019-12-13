@@ -10,27 +10,30 @@ ILP_Object print;
 /* Global functions */
 
 
+/* Classes */
+
+
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp620;
+    ILP_Object ilptmp2803;
     {
-      ILP_Object ilptmp621;
-      ilptmp621 = ILP_String2ILP ("Un, ");
-      ilptmp620 = ILP_print (ilptmp621);
+      ILP_Object ilptmp2804;
+      ilptmp2804 = ILP_String2ILP ("Un, ");
+      ilptmp2803 = ILP_print (ilptmp2804);
     }
     {
-      ILP_Object ilptmp622;
-      ilptmp622 = ILP_String2ILP ("deux et ");
-      ilptmp620 = ILP_print (ilptmp622);
+      ILP_Object ilptmp2805;
+      ilptmp2805 = ILP_String2ILP ("deux et ");
+      ilptmp2803 = ILP_print (ilptmp2805);
     }
     {
-      ILP_Object ilptmp623;
-      ilptmp623 = ILP_String2ILP ("trois.");
-      ilptmp620 = ILP_print (ilptmp623);
+      ILP_Object ilptmp2806;
+      ilptmp2806 = ILP_String2ILP ("trois.");
+      ilptmp2803 = ILP_print (ilptmp2806);
     }
-    return ilptmp620;
+    return ilptmp2803;
   }
 
 }

@@ -21,11 +21,11 @@ ILP_Object ilp__deuxfois(ILP_Closure ilp_useless
 ,
     ILP_Object x1) {
 { 
-  ILP_Object ilptmp241; 
-  ILP_Object ilptmp242; 
-ilptmp241 = ILP_Integer2ILP(2); 
-ilptmp242 = x1; 
-return ILP_Times(ilptmp241, ilptmp242);
+  ILP_Object ilptmp2424; 
+  ILP_Object ilptmp2425; 
+ilptmp2424 = ILP_Integer2ILP(2); 
+ilptmp2425 = x1; 
+return ILP_Times(ilptmp2424, ilptmp2425);
 } 
 }
 struct ILP_Closure deuxfois_closure_object = { 
@@ -40,11 +40,11 @@ ILP_Object ilp__apply(ILP_Closure ilp_useless
     ILP_Object f2,
     ILP_Object x3) {
 { 
-  ILP_Object ilptmp243; 
-  ILP_Object ilptmp244; 
-ilptmp243 = f2; 
-ilptmp244 = x3; 
-return ILP_invoke(ilptmp243, 1, ilptmp244);
+  ILP_Object ilptmp2426; 
+  ILP_Object ilptmp2427; 
+ilptmp2426 = f2; 
+ilptmp2427 = x3; 
+return ILP_invoke(ilptmp2426, 1, ilptmp2427);
 }
 }
 struct ILP_Closure apply_closure_object = { 
@@ -55,20 +55,23 @@ struct ILP_Closure apply_closure_object = {
 }; 
 
 
+/* Classes */ 
+
+
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp245; 
-  ILP_Object ilptmp246; 
+  ILP_Object ilptmp2428; 
+  ILP_Object ilptmp2429; 
 { 
-  ILP_Object ilptmp247; 
-  ILP_Object ilptmp248; 
-ilptmp247 = (ILP_Object)&deuxfois_closure_object; 
-ilptmp248 = ILP_Integer2ILP(3000); 
-ilptmp245 = ilp__apply(NULL , ilptmp247, ilptmp248);
+  ILP_Object ilptmp2430; 
+  ILP_Object ilptmp2431; 
+ilptmp2430 = (ILP_Object)&deuxfois_closure_object; 
+ilptmp2431 = ILP_Integer2ILP(3000); 
+ilptmp2428 = ilp__apply(NULL , ilptmp2430, ilptmp2431);
 }
-ilptmp246 = ILP_Integer2ILP(7); 
-return ILP_Minus(ilptmp245, ilptmp246);
+ilptmp2429 = ILP_Integer2ILP(7); 
+return ILP_Minus(ilptmp2428, ilptmp2429);
 } 
 
 } 

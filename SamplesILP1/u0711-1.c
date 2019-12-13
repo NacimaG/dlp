@@ -9,21 +9,24 @@
 /* Global functions */
 
 
+/* Classes */
+
+
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp398;
-    ILP_Object ilptmp399;
-    ilptmp398 = ILP_Integer2ILP (711);
+    ILP_Object ilptmp2581;
+    ILP_Object ilptmp2582;
+    ilptmp2581 = ILP_Integer2ILP (711);
     {
-      ILP_Object ilptmp400;
-      ILP_Object ilptmp401;
-      ilptmp400 = ILP_FALSE;
-      ilptmp401 = ILP_Integer2ILP (2);
-      ilptmp399 = ILP_Or (ilptmp400, ilptmp401);
+      ILP_Object ilptmp2583;
+      ILP_Object ilptmp2584;
+      ilptmp2583 = ILP_FALSE;
+      ilptmp2584 = ILP_Integer2ILP (2);
+      ilptmp2582 = ILP_Or (ilptmp2583, ilptmp2584);
     }
-    return ILP_Or (ilptmp398, ilptmp399);
+    return ILP_Or (ilptmp2581, ilptmp2582);
   }
 
 }

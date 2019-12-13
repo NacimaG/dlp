@@ -10,13 +10,16 @@ ILP_Object print;
 /* Global functions */
 
 
+/* Classes */
+
+
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp615;
-    ilptmp615 = ILP_String2ILP ("Ceci est une chaine");
-    return ILP_print (ilptmp615);
+    ILP_Object ilptmp2798;
+    ilptmp2798 = ILP_String2ILP ("Ceci est une chaine");
+    return ILP_print (ilptmp2798);
   }
 
 }

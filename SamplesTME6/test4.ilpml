@@ -1,0 +1,10 @@
+function deuxfois(x)
+
+	2 * x;
+
+function apply(y)
+	deuxfois(y);
+	
+
+apply(3000) - 7
+

@@ -9,15 +9,18 @@
 /* Global functions */ 
 
 
+/* Classes */ 
+
+
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp473; 
-ilptmp473 = ILP_Integer2ILP(1); 
-ilptmp473 = ILP_Float2ILP(2.2); 
-ilptmp473 = ILP_TRUE; 
-ilptmp473 =  ILP_String2ILP("foobar"); 
-return ilptmp473; 
+  ILP_Object ilptmp2656; 
+ilptmp2656 = ILP_Integer2ILP(1); 
+ilptmp2656 = ILP_Float2ILP(2.2); 
+ilptmp2656 = ILP_TRUE; 
+ilptmp2656 =  ILP_String2ILP("foobar"); 
+return ilptmp2656; 
 } 
 
 } 

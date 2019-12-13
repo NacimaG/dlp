@@ -10,56 +10,59 @@ ILP_Object print;
 /* Global functions */
 
 
+/* Classes */
+
+
 ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp18;
-    ilptmp18 = ILP_Integer2ILP (49);
+    ILP_Object ilptmp2201;
+    ilptmp2201 = ILP_Integer2ILP (49);
 
     {
-      ILP_Object x1 = ilptmp18;
+      ILP_Object x1 = ilptmp2201;
       {
-	ILP_Object ilptmp19;
+	ILP_Object ilptmp2202;
 	{
-	  ILP_Object ilptmp20;
-	  ilptmp20 = x1;
-	  ilptmp19 = ILP_print (ilptmp20);
+	  ILP_Object ilptmp2203;
+	  ilptmp2203 = x1;
+	  ilptmp2202 = ILP_print (ilptmp2203);
 	}
 	{
-	  ILP_Object ilptmp21;
+	  ILP_Object ilptmp2204;
 	  {
-	    ILP_Object ilptmp22;
-	    ILP_Object ilptmp23;
-	    ilptmp22 = x1;
-	    ilptmp23 = ILP_Integer2ILP (1);
-	    ilptmp21 = ILP_Plus (ilptmp22, ilptmp23);
+	    ILP_Object ilptmp2205;
+	    ILP_Object ilptmp2206;
+	    ilptmp2205 = x1;
+	    ilptmp2206 = ILP_Integer2ILP (1);
+	    ilptmp2204 = ILP_Plus (ilptmp2205, ilptmp2206);
 	  }
-	  ilptmp19 = (x1 = ilptmp21);
+	  ilptmp2202 = (x1 = ilptmp2204);
 	}
 	{
-	  ILP_Object ilptmp24;
-	  ilptmp24 = x1;
-	  ilptmp19 = ILP_print (ilptmp24);
+	  ILP_Object ilptmp2207;
+	  ilptmp2207 = x1;
+	  ilptmp2202 = ILP_print (ilptmp2207);
 	}
 	{
-	  ILP_Object ilptmp25;
+	  ILP_Object ilptmp2208;
 	  {
-	    ILP_Object ilptmp26;
-	    ILP_Object ilptmp27;
-	    ilptmp26 = x1;
-	    ilptmp27 = ILP_Integer2ILP (1);
-	    ilptmp25 = ILP_Plus (ilptmp26, ilptmp27);
+	    ILP_Object ilptmp2209;
+	    ILP_Object ilptmp2210;
+	    ilptmp2209 = x1;
+	    ilptmp2210 = ILP_Integer2ILP (1);
+	    ilptmp2208 = ILP_Plus (ilptmp2209, ilptmp2210);
 	  }
-	  ilptmp19 = (x1 = ilptmp25);
+	  ilptmp2202 = (x1 = ilptmp2208);
 	}
 	{
-	  ILP_Object ilptmp28;
-	  ilptmp28 = x1;
-	  ilptmp19 = ILP_print (ilptmp28);
+	  ILP_Object ilptmp2211;
+	  ilptmp2211 = x1;
+	  ilptmp2202 = ILP_print (ilptmp2211);
 	}
-	ilptmp19 = x1;
-	return ilptmp19;
+	ilptmp2202 = x1;
+	return ilptmp2202;
       }
 
     }
