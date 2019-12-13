@@ -44,7 +44,11 @@ implements INormalizationFactory {
         return new ASTCprogram(functions, clazzes, expression); 
     }
 
- 
+ // On crée ACTC lorsque ce qu'on veut compiiler en langage C n'existe pas en C
+ //on ne peut pas compiler directement vers du C
+ // transformé en un autre noued aSTC
+ //
+    
     // Class related
     
     @Override
