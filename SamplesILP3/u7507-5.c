@@ -17,7 +17,7 @@ ilp__mkf (ILP_Closure ilp_useless, ILP_Object y1, ILP_Object z2)
 {
   y1 = ILP_Value2Box (y1);
   z2 = ILP_Value2Box (z2);
-  return ILP_make_closure (ilpclosure4, 1, 2, z2, y1);
+  return ILP_make_closure (ilpclosure4, 1, 2, y1, z2);
 }
 
 struct ILP_Closure mkf_closure_object = {
@@ -30,8 +30,8 @@ struct ILP_Closure mkf_closure_object = {
 ILP_Object
 ilpclosure4 (ILP_Closure ilp_closure, ILP_Object t3)
 {
-  ILP_Object z2 = ilp_closure->_content.asClosure.closed_variables[0];
-  ILP_Object y1 = ilp_closure->_content.asClosure.closed_variables[1];
+  ILP_Object y1 = ilp_closure->_content.asClosure.closed_variables[0];
+  ILP_Object z2 = ilp_closure->_content.asClosure.closed_variables[1];
   {
     ILP_Object ilptmp1828;
     ILP_Object ilptmp1829;

@@ -98,6 +98,9 @@ typedef struct ILP_Exception {
      }                  _content;
 } *ILP_Exception;
 
+
+
+
 typedef struct ILP_Class {
      struct ILP_Class* _class;
      union {
@@ -399,6 +402,9 @@ extern int /* boolean */ ILP_is_a (ILP_Object o, ILP_Class class);
 extern ILP_general_function ILP_find_method (ILP_Object receiver,
                                              ILP_Method method,
                                              int argc);
+
+
+
 extern ILP_general_function ILP_find_invokee (ILP_Object closure, int argc);
 extern ILP_Object ILP_make_closure(ILP_general_function f, 
                                    int arity, int argc, ...);

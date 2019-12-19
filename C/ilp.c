@@ -352,56 +352,9 @@ ILP_is_subclass_of (ILP_Class oclass, ILP_Class otherclass)
      }
 }          
 
-/** Find the appropriate method */
 
-ILP_general_function
-ILP_find_method (ILP_Object receiver,
-                 ILP_Method method,
-                 int argc)
-{
-     ILP_Class oclass = receiver->_class;
-     if ( ! ILP_is_subclass_of(oclass, 
-                               method->_content.asMethod.class_defining) ) {
-          /* Signaler une absence de méthode */
-          snprintf(ILP_the_exception._content.asException.message,
-                   ILP_EXCEPTION_BUFFER_LENGTH,
-                   "No such method %s\nCulprit: 0x%p\n",
-                   method->_content.asMethod.name, 
-                   (void*) receiver);
-          /*DEBUG*/
-          fprintf(stderr, "%s", ILP_the_exception._content.asException.message);
-          ILP_the_exception._content.asException.culprit[0] = receiver;
-          ILP_the_exception._content.asException.culprit[1] = 
-               (ILP_Object) method;
-          ILP_the_exception._content.asException.culprit[2] = NULL;
-          ILP_throw((ILP_Object) &ILP_the_exception);
-          /* UNREACHED */
-          return NULL;          
-     };
-     if ( argc != method->_content.asMethod.arity ) {
-          /* Signaler une erreur d'arité */
-          snprintf(ILP_the_exception._content.asException.message,
-                   ILP_EXCEPTION_BUFFER_LENGTH,
-                   "Method %s arity error: %d instead of %d\nCulprit: 0x%p\n",
-                   method->_content.asMethod.name, 
-                   argc,
-                   method->_content.asMethod.arity,
-                   (void*) receiver);
-          /*DEBUG*/
-          fprintf(stderr, "%s", ILP_the_exception._content.asException.message);
-          ILP_the_exception._content.asException.culprit[0] = receiver;
-          ILP_the_exception._content.asException.culprit[1] = 
-               (ILP_Object) method;
-          ILP_the_exception._content.asException.culprit[2] = NULL;
-          ILP_throw((ILP_Object) &ILP_the_exception);
-          /* UNREACHED */
-          return NULL;
-     };
-     {
-          int index = method->_content.asMethod.index;
-          return oclass->_content.asClass.method[index];
-     }
-}
+
+
 
 ILP_Object 
 ILP_find_and_call_super_method ( 
