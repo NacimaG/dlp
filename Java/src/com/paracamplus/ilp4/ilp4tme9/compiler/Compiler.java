@@ -13,7 +13,6 @@ public class Compiler extends com.paracamplus.ilp4.compiler.Compiler{
 
 	public Compiler(IOperatorEnvironment ioe, IGlobalVariableEnvironment igve) {
 		super(ioe, igve);
-		// TODO Auto-generated constructor stub
 	}
 	 @Override
 		public Void visit(IASTsend iast, Context context)

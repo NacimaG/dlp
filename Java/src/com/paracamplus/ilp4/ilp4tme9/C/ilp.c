@@ -353,23 +353,24 @@ ILP_is_subclass_of (ILP_Class oclass, ILP_Class otherclass)
 }
 // AJOUT
 
-ILP_Object receiv = NULL;
-ILP_Method meth=NULL;
-int ar=0;
-ILP_general_function res=NULL;
 
 
 ILP_general_function
 ILP_find_method_global_cache(ILP_Object receiver ,
 							ILP_Method method,
 							int argc){
+	static ILP_Object receiv = NULL;
+	static ILP_Method meth=NULL;
+	static int ar=0;
+	static ILP_general_function res=NULL;
 
 	if ((receiver == receiv)&&(method == meth)&&(ar==argc)){
 		return res;
 	}else{
 		receiv = receiver;
-		method = meth;
+		meth = method;
 		ar = argc;
+		static ILP_general_function res;
 
 		res = ILP_find_method(receiver,method,argc);
 		return res;
@@ -377,15 +378,19 @@ ILP_find_method_global_cache(ILP_Object receiver ,
 
 }
 
+
 ILP_general_function
 ILP_find_method (ILP_Object receiver,
                  ILP_Method method,
                  int argc)
 {
 	//AJOUT
+	static ILP_Object receiv=NULL;
 	receiv = receiver;
-	meth = method;
-	ar = argc ;
+	static ILP_Method meth ;
+	meth=method;
+	static int ar ;
+	ar=argc ;
 	//FIN AJOUT
      ILP_Class oclass = receiver->_class;
      if ( ! ILP_is_subclass_of(oclass, 
@@ -428,6 +433,7 @@ ILP_find_method (ILP_Object receiver,
      {
           int index = method->_content.asMethod.index;
           //MODIF
+          static ILP_general_function res;
           res = oclass->_content.asClass.method[index];
           return res;
      }
